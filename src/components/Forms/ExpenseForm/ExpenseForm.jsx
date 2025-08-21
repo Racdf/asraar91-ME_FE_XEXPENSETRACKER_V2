@@ -117,8 +117,8 @@ export default function ExpenseForm({ setIsOpen, expenseList, setExpenseList, ed
                     <option value='food'>Food</option>
                     <option value="entertainment">Entertainment</option>
                     <option value="travel">Travel</option>
+                    <option value="other">Other</option>
                 </select>
-
                 <input name="date" type="date"
                     value={formData.date}
                     onChange={handleChange}
