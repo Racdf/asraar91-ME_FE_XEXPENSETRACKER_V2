@@ -3,6 +3,7 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 import { PiPizza, PiGift } from "react-icons/pi";
 import { MdOutlineModeEdit } from "react-icons/md";
 import { BsSuitcase2 } from "react-icons/bs";
+import { GoUnverified } from "react-icons/go";
 
 export default function TransactionCard({ details, handleDelete, handleEdit }) {
 
@@ -13,6 +14,8 @@ export default function TransactionCard({ details, handleDelete, handleEdit }) {
                     {details.category === 'food' && <PiPizza />}
                     {details.category === 'entertainment' && <PiGift />}
                     {details.category === 'travel' && <BsSuitcase2 />}
+                    {details.category === 'other' && 
+<GoUnverified />}
                 </div>
                 <div className={styles.cardInfo}>
                     <h5>{details.title}</h5>
