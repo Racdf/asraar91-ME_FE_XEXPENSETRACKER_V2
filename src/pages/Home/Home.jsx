@@ -70,6 +70,7 @@ export default function Home() {
         travelSpends += Number(item.price);
       } else if (item.category === "other") {
         otherSpends += Number(item.price);
+      }
     });
 
     setCategorySpends({
