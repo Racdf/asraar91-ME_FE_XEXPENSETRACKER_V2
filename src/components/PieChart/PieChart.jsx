@@ -16,8 +16,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, outerRadius, percent }) => {
       fill="white"
       textAnchor="middle"
       dominantBaseline="central"
-      fontSize={14}
-      fontWeight="bold"
+      fontSize={12}
     >
       {`${(percent * 100).toFixed(0)}%`}
     </text>
