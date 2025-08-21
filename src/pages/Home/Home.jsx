@@ -21,6 +21,7 @@ export default function Home() {
     food: 0,
     entertainment: 0,
     travel: 0,
+    other: 0,
   });
 
   useEffect(() => {
@@ -57,7 +58,8 @@ export default function Home() {
 
     let foodSpends = 0,
       entertainmentSpends = 0,
-      travelSpends = 0;
+      travelSpends = 0,
+      otherSpends = 0;
 
     expenseList.forEach((item) => {
       if (item.category === "food") {
@@ -66,13 +68,15 @@ export default function Home() {
         entertainmentSpends += Number(item.price);
       } else if (item.category === "travel") {
         travelSpends += Number(item.price);
-      }
+      } else if (item.category === "other") {
+        otherSpends += Number(item.price);
     });
 
     setCategorySpends({
       food: foodSpends,
       travel: travelSpends,
       entertainment: entertainmentSpends,
+      other: otherSpends,
     });
   }, [expenseList, isMounted]);
 
@@ -109,6 +113,8 @@ export default function Home() {
             { name: "Food", value: categorySpends.food },
             { name: "Entertainment", value: categorySpends.entertainment },
             { name: "Travel", value: categorySpends.travel },
+            { name: "Other", value:
+categorySpends.other },
           ]}
         />
       </div>
@@ -127,6 +133,8 @@ export default function Home() {
             { name: "Food", value: categorySpends.food },
             { name: "Entertainment", value: categorySpends.entertainment },
             { name: "Travel", value: categorySpends.travel },
+            { name: "Other", value:
+categorySpends.other },
           ]}
         />
       </div>
